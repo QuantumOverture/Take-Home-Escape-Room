@@ -12,7 +12,7 @@
     <h3 style="">Can YOU find your way OUT?</h3>
 </section>
 
-<div class = 'button_div'><button>Start the game</button></div>
+<div class = 'button_div'><a id = 'play_button' href="manual">PLAY!</a></div>
 
 <section class = 'content_section'>
     <h4>Goal of the Game</h4>
@@ -20,7 +20,7 @@
         This is a <span class = 'emphasis_phrase'>VIRTUAL ESCAPE ROOM</span>, a perfect puzzle solving game for quarantine. The game involves two parties:
         <ol>
             <li>An <span class = 'emphasis_phrase'>ESCAPEE</span>, who needs to ESCAPE THE DEVICE before time runs out</li>
-            <li>The <span class = 'emphasos_phrase'>INSTURCTORS</span>, who need to tell the escapee how to escape the device</li>
+            <li>The <span class = 'emphasis_phrase'>INSTRUCTORS</span>, who need to tell the escapee how to escape the device</li>
         </ol>
         <br>
 
@@ -116,10 +116,16 @@
         text-align: center;
     }
 
-    button
+    #play_button
     {
         color: red;
         font-family: 'Denk One';
+        background-color: black;
+        display: inline-block;
+        padding: 1vw;
+        font-variant: small-caps;
+        border-radius: 6.25vw;
+        font-size: 1.5vw;
     }
 
     h2
