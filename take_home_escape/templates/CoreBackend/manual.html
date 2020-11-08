@@ -10,8 +10,23 @@
         <h1>Device#1337 Manual Page</h1>
     </div>
     <br>
-    <div style="text-align: center;">
-     
-    </div>
+    {% for SubDict,Value in Main.items %}
+        <div style="text-align: center;">
+        <h2 style="border-bottom:black 2px solid;display: block;text-align: center;width:10em">  {{ SubDict }}</h2>
+        <ul style="float: left;font-size: 1.5em;text-align: left;">
+        {% for InnerDict in Value %}
+            {% if "Model" in InnerDict %}
+                <li>Model: {{  InnerDict.Model}}</li>
+                <li>Instructions: {{  InnerDict.Instructions }}</li>
+            {% else %}
+                <li>Model: {{   InnerDict.Real_Model}}</li>
+                <li>Instructions: {{  InnerDict.Instructions }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+        </div>
+        <br>
+    {% endfor %}
+
 </body>
 </html>
